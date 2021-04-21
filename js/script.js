@@ -1,5 +1,3 @@
-pageLoaded();
-
 
 function pageLoaded() {
 
