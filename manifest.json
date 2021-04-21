@@ -3,11 +3,11 @@
     "short_name": "BW",
 
     "icons": [{
-        "src": "img/icon.png",
+        "src": "images/icons/152_152.png",
         "sizes": "600x600",
         "type": "image/png"
     }, {
-        "src": "img/icon.png",
+        "src": "images/icons/152_152.png",
         "sizes": "600x600",
         "type": "image/png",
         "purpose": "any maskable"
