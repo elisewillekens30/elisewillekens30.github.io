@@ -141,7 +141,7 @@ input:focus{outline: 0;}
 }
 #playRules{
   position: absolute;
-  bottom: 100px!important;
+  bottom: 20px!important;
 }
 #sends{
   background: #A5DAFF url(../images/interfaces/send.png) no-repeat;
@@ -256,7 +256,7 @@ input:focus{outline: 0;}
 }
 
 .icon-rules p{
-  width: 50%;
+  width: 70%;
 }
 
 
