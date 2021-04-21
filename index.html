@@ -1,116 +1,112 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>H2O PWA (Progressive Web Application)</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>boat WAR</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/icon.png">
 
-    <meta name="description" content="MuddyGames Progressive Web Application">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="MuddyGames">
-
-    <link rel="apple-touch-icon" href="images/icons/152_152.png">
-    <meta name="theme-color" content="white" />
+    <link rel="apple-touch-icon" href="img/icon.png">
+    <meta name="theme-color" content="#D1D8D8" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="MuddyGames PWA (Progressive Web Application)">
+    <meta name="apple-mobile-web-app-title" content="Boat WAR">
 
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-status-bar-style" content="black">
-    <meta name="mobile-web-app-title" content="MuddyGames PWA (Progressive Web Application)">
+    <meta name="mobile-web-app-title" content="Boat WAR">
 
-    <meta name="msapplication-TileImage" content="images/icons/144_144.png">
-    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="img/icon.png">
+    <meta name="msapplication-TileColor" content="#D1D8D8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
 
-    <link rel="manifest" href="manifest.json"/>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="register.js"></script>
-    
-     
+    <link rel="shortcut icon" href="img/icon.png" type="image/png">
 </head>
 
 <body onload="pageLoaded()">
 
-  <div id="interface">
-    <div id="infoPlayer"><h3>Player</h3><h2>0</h2></div>
-    <div id="infoName">
-      <div><h1>H2O</h1></div>
-      <div>
-        <h3>
-          <span id="currentPartie"></span>/<span id="nbPartie"></span>
-        </h3>
+    <div id="interface">
+      <div id="infoPlayer"><h3>Player</h3><h2>0</h2></div>
+      <div id="infoName">
+        <div><h1>H2O</h1></div>
+        <div>
+          <h3>
+            <span id="currentPartie"></span>/<span id="nbPartie"></span>
+          </h3>
+        </div>
       </div>
+      <div id="infoBots"><h2>0</h2><h3>Bots</h3></div>
     </div>
-    <div id="infoBots"><h2>0</h2><h3>Bots</h3></div>
-  </div>
+    
+    <canvas id="game" width="900" height="500" style="border: 1px solid #000;">
+      Oops! looks like your browser does not support canvas tag
+    </canvas>
   
-  <canvas id="game" width="900" height="500" style="border: 1px solid #000;">
-    Oops! looks like your browser does not support canvas tag
-  </canvas>
-
-  <div id="form" class="popup displaynone">
-    <div>
-      <div class="name"><h1>H2O</h1></div>
-      <label for="name">Your player Name:</label>
-      <input type="text" name="name" id="nameplayer"><br><br>
-      <label for="number">Number Parties:</label>
-      <input type="number" id="nbparties" name="number" value="3" range="1"><br>
-      <button id="playForm" class="playbtn">Play</button>
-    </div> 
-  </div>
-
-  <div id="resume" class="popup displaynone">
-    <div>
-      <div class="name"><h1>H2O</h1></div>
-      <p>Resume the last part</p>
+    <div id="form" class="popup displaynone">
       <div>
-        <div><span id="namePlayerResume">Player</span>:  <span id="pointsPlayerResume">0</span> / <span id="totalPartiesPlayerResume">0</span></div>
-        <div><span>Bots</span>:  <span id="pointsBotsendResume">0</span> / <span id="totalPartiesBotsResume">0</span></div>
-      </div>
-      <button id="playResume" class="playbtn removebtn">resume</button>
-      <button id="playNew" class="playbtn startnew">Start a new</button>
+        <div class="name"><h1>H2O</h1></div>
+        <label for="name">Your player Name:</label>
+        <input type="text" name="name" id="nameplayer"><br><br>
+        <label for="number">Number Parties:</label>
+        <input type="number" id="nbparties" name="number" value="3" range="1"><br>
+        <button id="playForm" class="playbtn">Play</button>
+      </div> 
     </div>
-  </div>
-
-  <div id="rules" class="displaynone popup">
-    <div>
-      <div class="name"><h1>H2O</h1></div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corporis facilis voluptates iure quam vero, facere eligendi est eos aliquam distinctio modi impedit velit quia?</p>
-      <button id="playRules" class="playbtn">Start</button>
-    </div>
-  </div>
-
-  <div id="info" class="displaynone popup">
-    <div>
-      <div class="name"><h1>H2O</h1></div>
-      <p></p>
-      <button id="replay" class="playbtn">Replay</button>
-    </div>
-  </div>
-
-
-  <div id="end" class="popup displaynone">
-    <div>
-      <div class="name"><h1>H2O</h1></div>
+  
+    <div id="resume" class="popup displaynone">
       <div>
-        <div><span id="namePlayerend">Player</span><span id="pointsPlayerend">0</span></div>
-        <div><span>Bots</span><span id="pointsBotsend">0</span></div>
+        <div class="name"><h1>H2O</h1></div>
+        <p>Resume the last part</p>
+        <div>
+          <div><span id="namePlayerResume">Player</span>:  <span id="pointsPlayerResume">0</span> / <span id="totalPartiesPlayerResume">0</span></div>
+          <div><span>Bots</span>:  <span id="pointsBotsendResume">0</span> / <span id="totalPartiesBotsResume">0</span></div>
+        </div>
+        <button id="playResume" class="playbtn removebtn">resume</button>
+        <button id="playNew" class="playbtn startnew">Start a new</button>
       </div>
-      <div id="textEnd"></div>
-      <button id="replayform" class="playbtn">New Game</button>
     </div>
-  </div>
-
-
-  <div id="buttons">
-    <button id="sends" class="btn"></button>
-    <button id="load" class="btn"></button>
-    <button id="protect" class="btn"></button>
-  </div>
-  <script src="js/script.js"></script>
-
+  
+    <div id="rules" class="displaynone popup">
+      <div>
+        <div class="name"><h1>H2O</h1></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corporis facilis voluptates iure quam vero, facere eligendi est eos aliquam distinctio modi impedit velit quia?</p>
+        <button id="playRules" class="playbtn">Start</button>
+      </div>
+    </div>
+  
+    <div id="info" class="displaynone popup">
+      <div>
+        <div class="name"><h1>H2O</h1></div>
+        <p></p>
+        <button id="replay" class="playbtn">Replay</button>
+      </div>
+    </div>
+  
+  
+    <div id="end" class="popup displaynone">
+      <div>
+        <div class="name"><h1>H2O</h1></div>
+        <div>
+          <div><span id="namePlayerend">Player</span><span id="pointsPlayerend">0</span></div>
+          <div><span>Bots</span><span id="pointsBotsend">0</span></div>
+        </div>
+        <div id="textEnd"></div>
+        <button id="replayform" class="playbtn">New Game</button>
+      </div>
+    </div>
+  
+  
+    <div id="buttons">
+      <button id="sends" class="btn"></button>
+      <button id="load" class="btn"></button>
+      <button id="protect" class="btn"></button>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="register.js"></script>
+    <script src="service_worker.js"></script>
 </body>
-
 </html>

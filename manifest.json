@@ -1,40 +1,21 @@
 {
-    "name": "MuddyGames Progressive Web Application",
-    "short_name": "MuddyGames PWA",
-    "theme_color": "#ffffff",
-    "background_color": "#000000",
-    "display": "minimal-ui",
-    "orientation": "landscape",
-    "start_url": "https://elisewillekens30.github.io/H2O/index.html",
+    "name": "boat WAR",
+    "short_name": "BW",
 
     "icons": [{
-        "src": "images/icons/128_128.png",
-        "sizes": "128x128",
+        "src": "img/icon.png",
+        "sizes": "600x600",
         "type": "image/png"
     }, {
-        "src": "images/icons/144_144.png",
-        "sizes": "144x144",
-        "type": "image/png"
-    }, {
-        "src": "images/icons/152_152.png",
-        "sizes": "152x152",
-        "type": "image/png"
-    }, {
-        "src": "images/icons/192_192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-    }, {
-        "src": "images/icons/256_256.png",
-        "sizes": "256x256",
-        "type": "image/png"
-    }, {
-        "src": "images/icons/512_512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-    }, {
-        "src": "images/icons/maskable_icon.png",
-        "sizes": "196x196",
+        "src": "img/icon.png",
+        "sizes": "600x600",
         "type": "image/png",
         "purpose": "any maskable"
-    }]
+    }],
+
+    "theme_color": "#00d800",
+    "background_color": "#D1D8D8",
+    "display": "minimal-ui",
+    "scope": "/",
+    "start_url": "/index.html"
 }
