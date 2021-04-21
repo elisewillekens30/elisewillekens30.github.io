@@ -1,4 +1,4 @@
-var cacheName = 'BW';
+var cacheName = 'H2O';
 var filesToCache = [
   'index.html',
   'css/style.css',
