@@ -1,5 +1,5 @@
 
-function pageLoaded() {
+//function pageLoaded() {
 
     var canvas = document.getElementById("game");
     var context = canvas.getContext("2d");
@@ -427,5 +427,5 @@ function pageLoaded() {
     botsPoint=donneesBots.numberwin;
     }
 
-}
+//}
 
