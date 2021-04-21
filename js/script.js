@@ -1,3 +1,6 @@
+pageLoaded();
+
+
 function pageLoaded() {
 
     var canvas = document.getElementById("game");
