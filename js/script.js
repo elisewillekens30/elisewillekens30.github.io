@@ -129,7 +129,7 @@
 
     function game(){
 
-        //music.play(); 
+        soundload.play(); 
 
         timeUpdate = new Date().getTime();
 

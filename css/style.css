@@ -13,7 +13,9 @@
     margin: 0;
     overflow: hidden;
 }
-
+.music_icons{
+  display: none;
+}
 canvas{
     margin-left: calc(50% - 450px);
     margin-top: 10vh;
