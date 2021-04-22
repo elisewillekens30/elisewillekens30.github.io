@@ -1,6 +1,22 @@
 
 //function pageLoaded() {
 
+    var music = document.getElementById("music");
+    music.volume = 0.5;
+    // Function to play music when the user clicks on the button Play music
+    function PlayMusic() {
+    var audio=document.getElementById("music");
+      audio.loop=true; //play the music in a loop
+      audio.play(); 
+    }
+    // Function to stop music when the user clicks on the button Stop music
+    function StopMusic() {
+      var audio = document.getElementById("music");
+      audio.pause();
+      audio.currentTime=0;
+    }
+    
+
     var canvas = document.getElementById("game");
     var context = canvas.getContext("2d");
 
