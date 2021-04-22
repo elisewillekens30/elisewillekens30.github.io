@@ -24,7 +24,7 @@
     var audio = document.getElementById('music');
     var soundload = document.getElementById('soundload');
     var soundsend = document.getElementById('soundsend');
-    var soundwatering = document.getElementById('soundwatering');
+    var soundsendprotect = document.getElementById('soundsendprotect');
     var soundprotect = document.getElementById('soundprotect');
 
 
@@ -189,7 +189,7 @@
         soundload.pause();
         soundprotect.pause();
         soundsend.pause();
-        soundwatering.pause();
+        soundsendprotect.pause();
     }
 
 
@@ -216,7 +216,7 @@
                 console.log('soundsend player');
                 break;
             case "watering":
-                soundwatering.play();
+                soundsendprotect.play();
                 console.log('wateringsound player');
                 break;
             case "protect":
@@ -240,7 +240,7 @@
                 console.log('sound send bots');
                 break;
             case "watering":
-                soundwatering.play();
+                soundsendprotect.play();
                 console.log('sound watering bots');
                 break;
             case "protect":
