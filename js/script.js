@@ -187,7 +187,7 @@
         protectBtn = new Bouton(document.getElementById("protect"), false);
 
         soundload.pause();
-        soundprotect.paue();
+        soundprotect.pause();
         soundsend.pause();
         soundwatering.pause();
     }
