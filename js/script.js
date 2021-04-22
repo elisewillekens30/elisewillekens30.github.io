@@ -21,7 +21,7 @@
     var nbGame ="";
 
     // audio
-    var music = document.getElementById('music');
+    var audio = document.getElementById('music');
     var soundload = document.getElementById('soundload');
     var soundsend = document.getElementById('soundsend');
     var soundwatering = document.getElementById('soundwatering');
@@ -129,7 +129,7 @@
 
     function game(){
 
-        soundload.play(); 
+        audio.play(); 
 
         timeUpdate = new Date().getTime();
 
@@ -452,6 +452,18 @@
     bots.win=donneesBots.win;
     botsPoint=donneesBots.numberwin;
     }
+
+    function PlayMusic() {
+        
+          audio.loop=true; //play the music in a loop
+          audio.play(); 
+        }
+        // Function to stop music when the user clicks on the button Stop music
+        function StopMusic() {
+         
+          audio.pause();
+          audio.currentTime=0;
+        }
 
 //}
 
