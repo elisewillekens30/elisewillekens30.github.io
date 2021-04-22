@@ -199,8 +199,47 @@
         animationdone = false;
         newround=true;
         player.play=this.id;
+        switch (player.animation) {
+            case "load":
+                soundload.play();
+                break;
+            case "sends":
+                soundsend.play();
+                break;
+            case "sendl":
+                soundsend.play();
+                break;
+            case "watering":
+                soundwatering.play();
+                break;
+            case "protect":
+                soundprotect.play();
+                break;
+            case "vide":
+                drawImage(playerVide);
+        }
+
+
+        switch (bots.animation) {
+            case "load":
+                soundload.play();
+                break;
+            case "sends":
+                soundsend.play();
+                break;
+            case "sendl":
+                soundsend.play();
+                break;
+            case "watering":
+                soundwatering.play();
+                break;
+            case "protect":
+                soundprotect.play();
+                break;
+            }
         round();
         addScore();
+
     }
 
     function botsAttack(){
@@ -269,25 +308,25 @@
             case "load":
                 drawImage(playerLoad);
                 player.water=true;
-                soundload.play();
+                //soundload.play();
                 break;
             case "sends":
                 drawImage(playerSendS);
                 player.water=false;
-                soundsend.play();
+                //soundsend.play();
                 break;
             case "sendl":
                 drawImage(playerSendL);
                 player.water=false;
-                soundsend.play();
+                //soundsend.play();
                 break;
             case "watering":
                 drawImage(playerWatering);
-                soundwatering.play();
+                //soundwatering.play();
                 break;
             case "protect":
                 drawImage(playerProtect);
-                soundprotect.play();
+                //soundprotect.play();
                 break;
             case "vide":
                 drawImage(playerVide);
@@ -298,25 +337,25 @@
             case "load":
                 drawImage(botsLoad);
                 bots.water=true;
-                soundload.play();
+                //soundload.play();
                 break;
             case "sends":
                 drawImage(botsSendS);
                 bots.water=false;
-                soundsend.play();
+                //soundsend.play();
                 break;
             case "sendl":
                 drawImage(botsSendL);
                 bots.water=false;
-                soundsend.play();
+                //soundsend.play();
                 break;
             case "watering":
                 drawImage(botsWatering);
-                soundwatering.play();
+                //soundwatering.play();
                 break;
             case "protect":
                 drawImage(botsProtect);
-                soundprotect.play();
+                //soundprotect.play();
                 break;
             case "vide":
                 drawImage(botsVide);
