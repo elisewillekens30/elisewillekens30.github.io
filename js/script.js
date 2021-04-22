@@ -199,47 +199,56 @@
         animationdone = false;
         newround=true;
         player.play=this.id;
+        round();
+        addScore();
+
         switch (player.animation) {
             case "load":
                 soundload.play();
+                console.log('soundload player');
                 break;
             case "sends":
                 soundsend.play();
+                console.log('soundsend player');
                 break;
             case "sendl":
                 soundsend.play();
+                console.log('soundsend player');
                 break;
             case "watering":
                 soundwatering.play();
+                console.log('wateringsound player');
                 break;
             case "protect":
                 soundprotect.play();
+                console.log('protectsound player');
                 break;
-            case "vide":
-                drawImage(playerVide);
         }
 
 
         switch (bots.animation) {
             case "load":
                 soundload.play();
+                console.log('sound load bots');
                 break;
             case "sends":
                 soundsend.play();
+                console.log('sound send bots');
                 break;
             case "sendl":
                 soundsend.play();
+                console.log('sound send bots');
                 break;
             case "watering":
                 soundwatering.play();
+                console.log('sound watering bots');
                 break;
             case "protect":
                 soundprotect.play();
+                console.log('sound protect bots');
                 break;
             }
-        round();
-        addScore();
-
+        
     }
 
     function botsAttack(){
