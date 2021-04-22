@@ -1,22 +1,7 @@
 
 //function pageLoaded() {
 
-    var music = document.getElementById("music");
-    music.volume = 0.5;
-    // Function to play music when the user clicks on the button Play music
-    function PlayMusic() {
-    var audio=document.getElementById("music");
-      audio.loop=true; //play the music in a loop
-      audio.play(); 
-    }
-    // Function to stop music when the user clicks on the button Stop music
-    function StopMusic() {
-      var audio = document.getElementById("music");
-      audio.pause();
-      audio.currentTime=0;
-    }
-    
-
+  
     var canvas = document.getElementById("game");
     var context = canvas.getContext("2d");
 
@@ -34,6 +19,14 @@
     var currentPartie=1;
     var saveDonne =false;
     var nbGame ="";
+
+    // audio
+    var music = document.getElementById('music');
+    var soundload = document.getElementById('soundload');
+    var soundsend = document.getElementById('soundsend');
+    var soundwatering = document.getElementById('soundwatering');
+    var soundprotect = document.getElementById('soundprotect');
+
 
     //initGame();
     initObject();
@@ -136,6 +129,8 @@
 
     function game(){
 
+        //music.play(); 
+
         timeUpdate = new Date().getTime();
 
         if (timeUpdate - timeInitial > 400) {
@@ -190,6 +185,11 @@
         sendBtn = new Bouton(document.getElementById("sends"), false);
         loadBtn = new Bouton(document.getElementById("load"), false);
         protectBtn = new Bouton(document.getElementById("protect"), false);
+
+        soundload.pause();
+        soundprotect.paue();
+        soundsend.pause();
+        soundwatering.pause();
     }
 
 
@@ -269,20 +269,25 @@
             case "load":
                 drawImage(playerLoad);
                 player.water=true;
+                soundload.play();
                 break;
             case "sends":
                 drawImage(playerSendS);
                 player.water=false;
+                soundsend.play();
                 break;
             case "sendl":
                 drawImage(playerSendL);
                 player.water=false;
+                soundsend.play();
                 break;
             case "watering":
                 drawImage(playerWatering);
+                soundwatering.play();
                 break;
             case "protect":
                 drawImage(playerProtect);
+                soundprotect.play();
                 break;
             case "vide":
                 drawImage(playerVide);
@@ -293,20 +298,25 @@
             case "load":
                 drawImage(botsLoad);
                 bots.water=true;
+                soundload.play();
                 break;
             case "sends":
                 drawImage(botsSendS);
                 bots.water=false;
+                soundsend.play();
                 break;
             case "sendl":
                 drawImage(botsSendL);
                 bots.water=false;
+                soundsend.play();
                 break;
             case "watering":
                 drawImage(botsWatering);
+                soundwatering.play();
                 break;
             case "protect":
                 drawImage(botsProtect);
+                soundprotect.play();
                 break;
             case "vide":
                 drawImage(botsVide);
