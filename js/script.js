@@ -419,7 +419,6 @@
     }
 
     function addScore(){
-        console.log(nbGame);
         var playerSauv = {
             "name": nameplayer, 
             "water":player.water, 
@@ -467,7 +466,7 @@
     currentPartie=donneesPlayer.currentPartie;
     nbGame=donneesPlayer.nbGame;
 
-    console.log(playerPoint);
+   
 
     donneesBots=JSON.parse(donneesBots);
 
