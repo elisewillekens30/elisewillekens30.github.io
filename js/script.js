@@ -22,6 +22,7 @@
 
     // audio
     var audio = document.getElementById('music');
+    audio.volume =  0.2;
     var soundload = document.getElementById('soundload');
     var soundsend = document.getElementById('soundsend');
     var soundsendprotect = document.getElementById('soundsendprotect');
@@ -68,6 +69,7 @@
         document.querySelector('#infoBots').querySelector('h2').innerHTML = botsPoint;
         document.querySelector('#nbPartie').innerHTML = nbGame;
         document.querySelector('#currentPartie').innerHTML = currentPartie; 
+        audio.play(); 
          
     });
 
@@ -75,6 +77,7 @@
     document.getElementById('playNew').addEventListener('click', function(){
         document.getElementById('resume').classList.add('displaynone');
         document.getElementById('form').classList.remove('displaynone');
+        audio.play(); 
     });
 
     document.getElementById('playRules').addEventListener('click', function(){
@@ -186,10 +189,10 @@
         loadBtn = new Bouton(document.getElementById("load"), false);
         protectBtn = new Bouton(document.getElementById("protect"), false);
 
-        soundload.pause();
+        /*soundload.pause();
         soundprotect.pause();
         soundsend.pause();
-        soundsendprotect.pause();
+        soundsendprotect.pause();*/
     }
 
 
@@ -205,7 +208,6 @@
         switch (player.animation) {
             case "load":
                 soundload.play();
-                console.log('soundload player');
                 break;
             case "sends":
                 soundsend.play();
