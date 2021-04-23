@@ -132,8 +132,6 @@
 
     function game(){
 
-        //audio.play(); 
-
         timeUpdate = new Date().getTime();
 
         if (timeUpdate - timeInitial > 400) {
@@ -189,10 +187,6 @@
         loadBtn = new Bouton(document.getElementById("load"), false);
         protectBtn = new Bouton(document.getElementById("protect"), false);
 
-        /*soundload.pause();
-        soundprotect.pause();
-        soundsend.pause();
-        soundsendprotect.pause();*/
     }
 
 
@@ -211,19 +205,15 @@
                 break;
             case "sends":
                 soundsend.play();
-                console.log('soundsend player');
                 break;
             case "sendl":
                 soundsend.play();
-                console.log('soundsend player');
                 break;
             case "watering":
                 soundsendprotect.play();
-                console.log('wateringsound player');
                 break;
             case "protect":
                 soundprotect.play();
-                console.log('protectsound player');
                 break;
         }
 
@@ -231,23 +221,18 @@
         switch (bots.animation) {
             case "load":
                 soundload.play();
-                console.log('sound load bots');
                 break;
             case "sends":
                 soundsend.play();
-                console.log('sound send bots');
                 break;
             case "sendl":
                 soundsend.play();
-                console.log('sound send bots');
                 break;
             case "watering":
                 soundsendprotect.play();
-                console.log('sound watering bots');
                 break;
             case "protect":
                 soundprotect.play();
-                console.log('sound protect bots');
                 break;
             }
         
@@ -319,25 +304,20 @@
             case "load":
                 drawImage(playerLoad);
                 player.water=true;
-                //soundload.play();
                 break;
             case "sends":
                 drawImage(playerSendS);
                 player.water=false;
-                //soundsend.play();
                 break;
             case "sendl":
                 drawImage(playerSendL);
                 player.water=false;
-                //soundsend.play();
                 break;
             case "watering":
                 drawImage(playerWatering);
-                //soundwatering.play();
                 break;
             case "protect":
                 drawImage(playerProtect);
-                //soundprotect.play();
                 break;
             case "vide":
                 drawImage(playerVide);
@@ -348,25 +328,20 @@
             case "load":
                 drawImage(botsLoad);
                 bots.water=true;
-                //soundload.play();
                 break;
             case "sends":
                 drawImage(botsSendS);
                 bots.water=false;
-                //soundsend.play();
                 break;
             case "sendl":
                 drawImage(botsSendL);
                 bots.water=false;
-                //soundsend.play();
                 break;
             case "watering":
                 drawImage(botsWatering);
-                //soundwatering.play();
                 break;
             case "protect":
                 drawImage(botsProtect);
-                //soundprotect.play();
                 break;
             case "vide":
                 drawImage(botsVide);
@@ -503,17 +478,6 @@
     botsPoint=donneesBots.numberwin;
     }
 
-    function PlayMusic() {
-        
-          audio.loop=true; //play the music in a loop
-          audio.play(); 
-        }
-        // Function to stop music when the user clicks on the button Stop music
-        function StopMusic() {
-         
-          audio.pause();
-          audio.currentTime=0;
-        }
 
 //}
 
